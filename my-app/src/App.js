@@ -1,38 +1,43 @@
-import React, { Component } from 'react';
-import './App.css';
-import HelloWorld from './HelloWorld';
-import Counter from './Counter';
-import FilteredList from './FilteredList'; 
+import React, { Component } from "react";
+import "./App.css";
+import HelloWorld from "./HelloWorld";
+import Counter from "./Counter";
+// import FilteredList from "./FilteredList";
+import FilteredList2 from "./FilteredList2";
 
 //TODO (FilteredList): create a produce list using the 'const' variable keyword
 
 class App extends Component {
-    render() {
-        return (
-
-			<div className="App">
-               <HelloWorld name = {'William Wang'} />
-               <Counter></Counter>
-               <FilteredList items={produce} />
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="App">
+        <HelloWorld name={"William Wang"} />
+        <Counter />
+        {/* <FilteredList items={produce} /> */}
+        <div
+          style={{
+            border: "1px solid black",
+          }}
+        />
+        <FilteredList2 items={produce} />
+      </div>
+    );
+  }
 }
 
 export default App;
 
-const produce =
-[
-    {name: "Apple", type: "Fruit"},
-    {name: "Pineapple", type: "Fruit"} ,
-    {name: "Banana", type: "Fruit"},
-    {name: "Pear", type: "Fruit"},
-    {name: "Strawberry", type: "Fruit"},
-    {name: "Orange", type: "Fruit"},
-    {name: "Lettuce", type: "Vegetable"},
-    {name: "Cucumber", type: "Vegetable"},
-    {name: "Eggplant", type: "Vegetable"},
-    {name: "Squash", type: "Vegetable"},
-    {name: "Bell pepper", type: "Vegetable"},
-    {name: "Onion", type: "Vegetable"},
-]
+const produce = [
+  { name: "Apple", type: "Fruit" },
+  { name: "Pineapple", type: "Fruit" },
+  { name: "Banana", type: "Fruit" },
+  { name: "Pear", type: "Fruit" },
+  { name: "Strawberry", type: "Fruit" },
+  { name: "Orange", type: "Fruit" },
+  { name: "Lettuce", type: "Vegetable" },
+  { name: "Cucumber", type: "Vegetable" },
+  { name: "Eggplant", type: "Vegetable" },
+  { name: "Squash", type: "Vegetable" },
+  { name: "Bell pepper", type: "Vegetable" },
+  { name: "Onion", type: "Vegetable" },
+];
